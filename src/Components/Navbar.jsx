@@ -12,12 +12,12 @@ const Navbar = () => {
       <ul
         tabIndex="-1"
         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-        <li><a>Home</a></li>
+        <li><Link>Home</Link></li>
         <li>
           <a>Apps</a>
           
         </li>
-        <li><a>Installation</a></li>
+        <li><Link>Installation</Link></li>
       </ul>
     </div>
     <img src="/logo.png" alt="" className='w-10 h-10 ml-10'/>
@@ -27,17 +27,17 @@ const Navbar = () => {
 </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
-      <li><a>Home</a></li>
+      <li><Link to='/' >Home</Link></li>
       <li>
         
           <summary>Apps</summary>
         
       </li>
-      <li><a>Installation</a></li>
+      <li><Link to=''>Installation</Link></li>
     </ul>
   </div>
   <div className="navbar-end">
-    <a className="btn">Button</a>
+    <Link className="btn">Button</Link>
   </div>
 </div>
     );
