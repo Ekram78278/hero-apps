@@ -1,4 +1,13 @@
+import { Link, useLoaderData } from "react-router";
+
+import AppCard from "./AppCard";
+
 const home = () => {
+  const appData = useLoaderData();
+  console.log(appData);
+
+  const featuredApp = appData.slice(0, 8);
+
   return (
     <div>
       <div className="w-full max-w-[1600px] mx-auto min-h-[940px] flex flex-col justify-start items-center pt-4 md:pt-0  gap-6 sm:pt-20 px-4 sm:px-12 lg:px-20 pb-0  sm:gap-10">
@@ -50,6 +59,27 @@ const home = () => {
           </div>
         </div>
       </div>
+      <div className="flex flex-col justify-center items-center gap-2 mt-4">
+        <h4 className="text-2xl md:text-4xl font-bold">Trending Apps</h4>
+        <p className="text-gray-400">
+          {" "}
+          Explore All Trending Apps on the Market developed by us
+        </p>
+      </div>
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4">
+        {featuredApp.map((data) => (
+          <AppCard key={data.id} data={data}>
+            {" "}
+          </AppCard>
+        ))}
+      </div>
+
+      <Link
+        to="/allApps"
+        className="btn btn-secondary border-none justify-center bg-[linear-gradient(125.07deg,#632EE3,#9F62F2)] ml-60 lg:ml-[720px] mt-3 hover:scale-75 transition ease-in-out"
+      >
+        Show All
+      </Link>
     </div>
   );
 };

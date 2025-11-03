@@ -1,0 +1,382 @@
+[
+  {
+    "image": "/public/demo-app (1).webp",
+    "title": "TaskMaster Pro",
+    "companyName": "Productive Labs",
+    "id": 1001,
+    "description": "Organize your life and projects with the ultimate task manager.",
+    "size": 45.5,
+    "reviews": 35700,
+    "ratingAvg": 4.6,
+    "downloads": 5000000,
+    "ratings": [
+      { "name": "1 star", "count": 500 },
+      { "name": "2 star", "count": 700 },
+      { "name": "3 star", "count": 1500 },
+      { "name": "4 star", "count": 8000 },
+      { "name": "5 star", "count": 25000 }
+    ]
+  },
+  {
+    "image": "/public/demo-app (2).webp",
+    "title": "Galaxy Rusher",
+    "companyName": "PixelStorm Games",
+    "id": 1003,
+    "description": "Endless space runner with stunning graphics and fast-paced action.",
+    "size": 180.2,
+    "reviews": 32900,
+    "ratingAvg": 4.3,
+    "downloads": 10000000,
+    "ratings": [
+      { "name": "1 star", "count": 800 },
+      { "name": "2 star", "count": 1100 },
+      { "name": "3 star", "count": 3000 },
+      { "name": "4 star", "count": 10000 },
+      { "name": "5 star", "count": 18000 }
+    ]
+  },
+  {
+    "image": "/public/demo-app (3).webp",
+    "title": "Minty Budget",
+    "companyName": "FinTech Solutions",
+    "id": 1004,
+    "description": "Take control of your finances with easy-to-use budgeting tools.",
+    "size": 62.0,
+    "reviews": 28400,
+    "ratingAvg": 4.7,
+    "downloads": 1000000,
+    "ratings": [
+      { "name": "1 star", "count": 200 },
+      { "name": "2 star", "count": 300 },
+      { "name": "3 star", "count": 900 },
+      { "name": "4 star", "count": 6000 },
+      { "name": "5 star", "count": 21000 }
+    ]
+  },
+  {
+    "image": "/public/demo-app (4).webp",
+    "title": "Zenith Wellness",
+    "companyName": "MindBody Inc.",
+    "id": 1005,
+    "description": "Guided meditation, sleep stories, and mindfulness exercises.",
+    "size": 85.1,
+    "reviews": 18450,
+    "ratingAvg": 4.5,
+    "downloads": 800000,
+    "ratings": [
+      { "name": "1 star", "count": 300 },
+      { "name": "2 star", "count": 450 },
+      { "name": "3 star", "count": 1200 },
+      { "name": "4 star", "count": 4500 },
+      { "name": "5 star", "count": 12000 }
+    ]
+  },
+  {
+    "image": "/public/demo-app (5).webp",
+    "title": "QuickScan PDF",
+    "companyName": "Utility Apps Co.",
+    "id": 1006,
+    "description": "A powerful and fast document scanner for your pocket.",
+    "size": 25.8,
+    "reviews": 7800,
+    "ratingAvg": 3.1,
+    "downloads": 500000,
+    "ratings": [
+      { "name": "1 star", "count": 1500 },
+      { "name": "2 star", "count": 1000 },
+      { "name": "3 star", "count": 1800 },
+      { "name": "4 star", "count": 2000 },
+      { "name": "5 star", "count": 1500 }
+    ]
+  },
+  {
+    "image": "https://placehold.co/150x150/C11574/FFFFFF?text=Pixel",
+    "title": "PixelPerfect Editor",
+    "companyName": "Creative Suite",
+    "id": 1007,
+    "description": "Pro-level photo editing with intuitive filters and tools.",
+    "size": 112.4,
+    "reviews": 25000,
+    "ratingAvg": 4.3,
+    "downloads": 3000000,
+    "ratings": [
+      { "name": "1 star", "count": 600 },
+      { "name": "2 star", "count": 900 },
+      { "name": "3 star", "count": 2500 },
+      { "name": "4 star", "count": 7000 },
+      { "name": "5 star", "count": 14000 }
+    ]
+  },
+  {
+    "image": "https://placehold.co/150x150/067647/FFFFFF?text=EcoM",
+    "title": "EcoMart",
+    "companyName": "Sustainable Sellers",
+    "id": 1008,
+    "description": "Shop sustainably-sourced goods from local artisans.",
+    "size": 55.0,
+    "reviews": 11750,
+    "ratingAvg": 4.6,
+    "downloads": 500000,
+    "ratings": [
+      { "name": "1 star", "count": 100 },
+      { "name": "2 star", "count": 150 },
+      { "name": "3 star", "count": 500 },
+      { "name": "4 star", "count": 3000 },
+      { "name": "5 star", "count": 8000 }
+    ]
+  },
+  {
+    "image": "/public/demo-app (6).webp",
+    "title": "RapidRead News",
+    "companyName": "InfoStream Media",
+    "id": 1009,
+    "description": "Your daily news briefing, summarized and delivered fast.",
+    "size": 30.5,
+    "reviews": 11000,
+    "ratingAvg": 3.5,
+    "downloads": 1000000,
+    "ratings": [
+      { "name": "1 star", "count": 800 },
+      { "name": "2 star", "count": 1200 },
+      { "name": "3 star", "count": 3000 },
+      { "name": "4 star", "count": 3500 },
+      { "name": "5 star", "count": 2500 }
+    ]
+  },
+  {
+    "image": "https://placehold.co/150x150/6941C6/FFFFFF?text=Groov",
+    "title": "GrooveWave",
+    "companyName": "AudioPhonic",
+    "id": 1010,
+    "description": "Discover new music and create the perfect playlists.",
+    "size": 78.9,
+    "reviews": 18200,
+    "ratingAvg": 4.4,
+    "downloads": 2000000,
+    "ratings": [
+      { "name": "1 star", "count": 400 },
+      { "name": "2 star", "count": 500 },
+      { "name": "3 star", "count": 1300 },
+      { "name": "4 star", "count": 5000 },
+      { "name": "5 star", "count": 11000 }
+    ]
+  },
+  {
+    "image": "https://placehold.co/150x150/0086C9/FFFFFF?text=Nomad",
+    "title": "Nomad Navigator",
+    "companyName": "Wanderlust Tech",
+    "id": 1011,
+    "description": "Offline maps and travel guides for the modern explorer.",
+    "size": 215.0,
+    "reviews": 9300,
+    "ratingAvg": 4.5,
+    "downloads": 400000,
+    "ratings": [
+      { "name": "1 star", "count": 70 },
+      { "name": "2 star", "count": 130 },
+      { "name": "3 star", "count": 600 },
+      { "name": "4 star", "count": 2500 },
+      { "name": "5 star", "count": 6000 }
+    ]
+  },
+  {
+    "image": "https://placehold.co/150x150/B54708/FFFFFF?text=CodeC",
+    "title": "CodeCrafter Academy",
+    "companyName": "EduDev",
+    "id": 1012,
+    "description": "Learn to code from scratch with interactive lessons.",
+    "size": 42.3,
+    "reviews": 7330,
+    "ratingAvg": 4.6,
+    "downloads": 300000,
+    "ratings": [
+      { "name": "1 star", "count": 50 },
+      { "name": "2 star", "count": 80 },
+      { "name": "3 star", "count": 400 },
+      { "name": "4 star", "count": 1800 },
+      { "name": "5 star", "count": 5000 }
+    ]
+  },
+  {
+    "image": "https://placehold.co/150x150/0E7090/FFFFFF?text=FitTr",
+    "title": "FitTrack Elite",
+    "companyName": "Kinetics Health",
+    "id": 1013,
+    "description": "Your personal AI fitness coach for custom workouts and diet plans.",
+    "size": 95.2,
+    "reviews": 22400,
+    "ratingAvg": 4.8,
+    "downloads": 1500000,
+    "ratings": [
+      { "name": "1 star", "count": 100 },
+      { "name": "2 star", "count": 200 },
+      { "name": "3 star", "count": 700 },
+      { "name": "4 star", "count": 4400 },
+      { "name": "5 star", "count": 17000 }
+    ]
+  },
+  {
+    "image": "https://placehold.co/150x150/B54708/FFFFFF?text=ChefU",
+    "title": "ChefUp Recipes",
+    "companyName": "Gourmet Tech",
+    "id": 1014,
+    "description": "Discover thousands of recipes with step-by-step video instructions.",
+    "size": 68.7,
+    "reviews": 19500,
+    "ratingAvg": 4.7,
+    "downloads": 2000000,
+    "ratings": [
+      { "name": "1 star", "count": 150 },
+      { "name": "2 star", "count": 250 },
+      { "name": "3 star", "count": 800 },
+      { "name": "4 star", "count": 4300 },
+      { "name": "5 star", "count": 14000 }
+    ]
+  },
+  {
+    "image": "https://placehold.co/150x150/363F72/FFFFFF?text=Astro",
+    "title": "AstroView Stargazer",
+    "companyName": "Celestial Apps",
+    "id": 1015,
+    "description": "An augmented reality planetarium in your pocket. Explore the cosmos.",
+    "size": 130.4,
+    "reviews": 8800,
+    "ratingAvg": 4.5,
+    "downloads": 600000,
+    "ratings": [
+      { "name": "1 star", "count": 100 },
+      { "name": "2 star", "count": 200 },
+      { "name": "3 star", "count": 700 },
+      { "name": "4 star", "count": 2800 },
+      { "name": "5 star", "count": 5000 }
+    ]
+  },
+  {
+    "image": "https://placehold.co/150x150/027A48/FFFFFF?text=LangL",
+    "title": "LingoLeap",
+    "companyName": "Polyglot Inc.",
+    "id": 1016,
+    "description": "Learn a new language in just 10 minutes a day with fun, gamified lessons.",
+    "size": 75.0,
+    "reviews": 41000,
+    "ratingAvg": 4.6,
+    "downloads": 8000000,
+    "ratings": [
+      { "name": "1 star", "count": 800 },
+      { "name": "2 star", "count": 1000 },
+      { "name": "3 star", "count": 3200 },
+      { "name": "4 star", "count": 10000 },
+      { "name": "5 star", "count": 26000 }
+    ]
+  },
+  {
+    "image": "https://placehold.co/150x150/C11574/FFFFFF?text=Crypt",
+    "title": "CryptoFolio",
+    "companyName": "BlockChain Devs",
+    "id": 1017,
+    "description": "Track all your cryptocurrency investments in one secure place.",
+    "size": 50.8,
+    "reviews": 14200,
+    "ratingAvg": 3.9,
+    "downloads": 1000000,
+    "ratings": [
+      { "name": "1 star", "count": 1200 },
+      { "name": "2 star", "count": 1000 },
+      { "name": "3 star", "count": 2000 },
+      { "name": "4 star", "count": 4000 },
+      { "name": "5 star", "count": 6000 }
+    ]
+  },
+  {
+    "image": "https://placehold.co/150x150/6941C6/FFFFFF?text=Focus",
+    "title": "FocusFlow Timer",
+    "companyName": "DeepWork Studios",
+    "id": 1018,
+    "description": "A minimalist Pomodoro timer to help you stay focused and productive.",
+    "size": 15.3,
+    "reviews": 9500,
+    "ratingAvg": 4.9,
+    "downloads": 700000,
+    "ratings": [
+      { "name": "1 star", "count": 10 },
+      { "name": "2 star", "count": 40 },
+      { "name": "3 star", "count": 150 },
+      { "name": "4 star", "count": 800 },
+      { "name": "5 star", "count": 8500 }
+    ]
+  },
+  {
+    "image": "https://placehold.co/150x150/B42318/FFFFFF?text=Tower",
+    "title": "TowerFall Kingdoms",
+    "companyName": "MegaPixel Games",
+    "id": 1019,
+    "description": "A strategic tower defense game with epic heroes and magic spells.",
+    "size": 310.6,
+    "reviews": 55000,
+    "ratingAvg": 4.2,
+    "downloads": 12000000,
+    "ratings": [
+      { "name": "1 star", "count": 2500 },
+      { "name": "2 star", "count": 3000 },
+      { "name": "3 star", "count": 7500 },
+      { "name": "4 star", "count": 15000 },
+      { "name": "5 star", "count": 27000 }
+    ]
+  },
+  {
+    "image": "https://placehold.co/150x150/026AA2/FFFFFF?text=Cloud",
+    "title": "CloudNote",
+    "companyName": "Syncable Tech",
+    "id": 1020,
+    "description": "A simple, beautiful note-taking app that syncs across all devices.",
+    "size": 33.0,
+    "reviews": 16700,
+    "ratingAvg": 4.4,
+    "downloads": 3000000,
+    "ratings": [
+      { "name": "1 star", "count": 500 },
+      { "name": "2 star", "count": 600 },
+      { "name": "3 star", "count": 1600 },
+      { "name": "4 star", "count": 5000 },
+      { "name": "5 star", "count": 9000 }
+    ]
+  },
+  {
+    "image": "https://placehold.co/150x150/067647/FFFFFF?text=VoltC",
+    "title": "VoltCharge EV",
+    "companyName": "GreenWay Mobility",
+    "id": 1021,
+    "description": "Find and pay for EV charging stations on the go.",
+    "size": 48.1,
+    "reviews": 3100,
+    "ratingAvg": 3.6,
+    "downloads": 100000,
+    "ratings": [
+      { "name": "1 star", "count": 400 },
+      { "name": "2 star", "count": 300 },
+      { "name": "3 star", "count": 500 },
+      { "name": "4 star", "count": 800 },
+      { "name": "5 star", "count": 1100 }
+    ]
+  },
+  {
+    "image": "https://placehold.co/150x150/344054/FFFFFF?text=Artif",
+    "title": "Artify AI",
+    "companyName": "Neural Creations",
+    "id": 1022,
+    "description": "Generate stunning digital art from text prompts using advanced AI.",
+    "size": 89.9,
+    "reviews": 13300,
+    "ratingAvg": 4.1,
+    "downloads": 900000,
+    "ratings": [
+      { "name": "1 star", "count": 700 },
+      { "name": "2 star", "count": 800 },
+      { "name": "3 star", "count": 1800 },
+      { "name": "4 star", "count": 4000 },
+      { "name": "5 star", "count": 6000 }
+    ]
+  }
+  
+]
+
