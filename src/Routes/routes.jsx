@@ -4,6 +4,9 @@ import home from "../Pages/home.jsx";
 import MainLayout from "../Layouts/MainLayout.jsx";
 import ErrorPage from "../Pages/ErrorPage.jsx";
 import AllApps from "../Pages/AllApps.jsx";
+import AppInfo from "../Pages/AppInfo.jsx";
+
+
 
 
 const router = createBrowserRouter([
@@ -21,7 +24,12 @@ const router = createBrowserRouter([
         {
           path:'/allApps',
           Component:AllApps
-        }
+        },
+        {
+          path:'/appInfo/:id',
+          Component:AppInfo
+        },
+        
     ]
   },
 ]);

@@ -1,8 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 const AppCard = ({data}) => {
     return (
        <div>
+ <Link to={`/appInfo/${data.id}`}>
   <div className="bg-white rounded-lg shadow-md p-4 flex flex-col items-center hover:scale-105 transition ease-in-out">
     <img
       src={data.image}
@@ -36,6 +38,8 @@ const AppCard = ({data}) => {
       </div>
     </div>
   </div>
+ 
+ </Link>
 </div>
 
     );
