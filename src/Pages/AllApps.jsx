@@ -2,10 +2,16 @@ import { useState } from "react";
 import useApps from "../hooks/useAppData";
 
 import AppCard from "./AppCard";
+import Spinner from "../Components/Spinner";
 
 const AllApps = () => {
   const { apps, loading, error } = useApps();
   const [ search, setSearch ] = useState('');
+   if (loading) {
+    return <div>
+        <Spinner></Spinner> <h1>Loading......</h1>
+    </div>;
+  }
 
   const term =search.trim().toLocaleLowerCase()
   const searchedApps = term

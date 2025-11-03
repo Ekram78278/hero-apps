@@ -3,6 +3,7 @@ import {
   Bar,
   BarChart,
   CartesianGrid,
+  ResponsiveContainer,
   Tooltip,
   XAxis,
   YAxis,
@@ -22,27 +23,25 @@ export default function RatingsChart({ ratings }) {
   const chartData = [...ratings].reverse();
 
   return (
-    <BarChart
-      width={1500}
-      height={300}
-      data={chartData} // 3. Use the dynamic data from the prop
-      margin={margin}
-      layout="vertical"
-    >
-      <XAxis type="number" stroke="#8884d8" />
-      <YAxis type="category" dataKey="name" />
-      <Tooltip wrapperStyle={{ width: 100, backgroundColor: '#ccc' }} />
-      <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
-      
-      {/* 4. THIS IS THE KEY: 
-        Change dataKey from "uv" to "count" to match your JSON data.
-        I also changed the fill color to orange to match your image.
-      */}
-      <Bar dataKey="count" fill="#FB923C" barSize={30} />
-      
-      {/* (I removed the <Legend /> component because your 
-        example image didn't have one and it's cleaner without it) 
-      */}
-    </BarChart>
+   <div className="w-full max-w-2xl justify-center items-center">
+      {/* 2. Wrap your chart component */}
+      <ResponsiveContainer width="100%" aspect={2}> 
+      {/* 'aspect={2}' means width is 2x height. Adjust as you like. */}
+        
+        <BarChart
+          // 3. REMOVE fixed width and height from here
+          data={chartData}
+          margin={margin}
+          layout="vertical"
+        >
+          <XAxis type="number" stroke="#8884d8" />
+          <YAxis type="category" dataKey="name" />
+          <Tooltip wrapperStyle={{ width: 100, backgroundColor: '#ccc' }} />
+          <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
+          <Bar dataKey="count" fill="#FB923C" barSize={30} />
+        </BarChart>
+        
+      </ResponsiveContainer>
+    </div>
   );
 }
