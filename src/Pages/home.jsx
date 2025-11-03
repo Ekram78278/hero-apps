@@ -76,7 +76,7 @@ const home = () => {
 
       <Link
         to="/allApps"
-        className="btn btn-secondary border-none justify-center bg-[linear-gradient(125.07deg,#632EE3,#9F62F2)] ml-60 lg:ml-[720px] mt-3 hover:scale-75 transition ease-in-out"
+        className="btn btn-secondary border-none justify-center bg-[linear-gradient(125.07deg,#632EE3,#9F62F2)] ml-40 lg:ml-[720px] mt-3 hover:scale-75 transition ease-in-out"
       >
         Show All
       </Link>
