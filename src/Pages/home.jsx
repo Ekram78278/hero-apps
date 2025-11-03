@@ -1,10 +1,20 @@
 import { Link, useLoaderData } from "react-router";
 
 import AppCard from "./AppCard";
+import useApps from "../hooks/useAppData";
+import Spinner from "../Components/Spinner";
 
 const home = () => {
   const appData = useLoaderData();
+  const {apps, loading} = useApps();
+
+  if(loading) {
+    return <div>
+      <Spinner></Spinner>
+    </div>
+  }
   console.log(appData);
+  console.log(apps)
 
   const featuredApp = appData.slice(0, 8);
 

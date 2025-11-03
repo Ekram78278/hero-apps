@@ -13,7 +13,7 @@ const AppInfo = () => {
 
   if (loading) {
     return <div>
-        <Spinner></Spinner> <h1>Loading......</h1>
+        <Spinner></Spinner>
     </div>;
   }
 
