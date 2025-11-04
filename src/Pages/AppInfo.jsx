@@ -1,21 +1,68 @@
+import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router";
 import RatingsChart from "../Components/RatingsChart";
+import Spinner from "../Components/Spinner";
 import useApps from "../hooks/useAppData";
 import { formatCompact } from "../utils/formatters";
-import Spinner from "../Components/Spinner";
+import { toast, ToastContainer } from "react-toastify";
 
 const AppInfo = () => {
+  const [isInstalled, setIsInstalled] = useState(false);
+  
   const { id } = useParams();
   const { apps, loading } = useApps();
   const app = apps.find((p) => String(p.id) === id);
 
-  // Loading
+    // it will check if any app install or not 
+
+    useEffect (() => {
+        if(app) {
+            const existingList = JSON.parse(localStorage.getItem('installList')) || [];
+            const alreadyInstalled = existingList.some(a => a.id === app.id);
+            setIsInstalled(alreadyInstalled);
+        }
+    }, [app])
+
+//   After install it will add to install list as a local storage array 
+
+  const handleAddToInstalledList = () => {
+
+    const existingList = JSON.parse(localStorage.getItem('installList'))
+    let updateList = [];
+
+    if(existingList){
+        const isDuplicate = existingList.some( A => A.id === app.id)
+        if(isDuplicate) {
+             toast.warning("You have already Installed it Brother")
+             return false;
+           
+        }  updateList = [...existingList,app]
+    } else {
+        updateList.push(app)
+    }
+    localStorage.setItem('installList',JSON.stringify(updateList))
+    toast.success(`${app.title} installed successfully!`);
+    return true;
+}
+
+const handleInstall = (e) => {
+    e.preventDefault();
+    setIsInstalled(true);
+   
+  };
+
+
+    // Loading
 
   if (loading) {
-    return <div>
+    return (
+      <div>
         <Spinner></Spinner>
-    </div>;
+      </div>
+    );
   }
+
+ 
 
   const {
     title,
@@ -87,9 +134,13 @@ const AppInfo = () => {
             </div>
           </div>
           {/* Install Now Button */}
+          
           <div>
-            <Link className="btn mt-6 bg-green-300 rounded-md hover:scale-105 transition">
-              Install Now ({size}MB)
+            <Link  onClick={ (e) => {handleInstall(e); handleAddToInstalledList();} } className={`btn mt-6 rounded-md transition ${isInstalled ? "bg-gray-400 cursor-not-allowed":"bg-green-400 hover:scale-105"}`}>
+            
+            {isInstalled ? "Installed !! " : `Install Now (${size}MB)`}
+            
+            
             </Link>
           </div>
         </div>
@@ -111,15 +162,17 @@ const AppInfo = () => {
           {description} Lorem ipsum dolor sit amet consectetur adipisicing elit.
           Facilis, quo minima cupiditate quas ea voluptatibus at, culpa
           recusandae asperiores animi nihil commodi, fuga perferendis nostrum
-          distinctio amet quos mollitia magni!Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Facilis, quo minima cupiditate quas ea voluptatibus at, culpa
-          recusandae asperiores animi nihil commodi, fuga perferendis nostrum
-          distinctio amet quos mollitia magni!Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Facilis, quo minima cupiditate quas ea voluptatibus at, culpa
-          recusandae asperiores animi nihil commodi, fuga perferendis nostrum
-          distinctio amet quos mollitia magni!
+          distinctio amet quos mollitia magni!Lorem ipsum dolor sit amet
+          consectetur adipisicing elit. Facilis, quo minima cupiditate quas ea
+          voluptatibus at, culpa recusandae asperiores animi nihil commodi, fuga
+          perferendis nostrum distinctio amet quos mollitia magni!Lorem ipsum
+          dolor sit amet consectetur adipisicing elit. Facilis, quo minima
+          cupiditate quas ea voluptatibus at, culpa recusandae asperiores animi
+          nihil commodi, fuga perferendis nostrum distinctio amet quos mollitia
+          magni!
         </p>
       </div>
+      <ToastContainer/>
     </div>
   );
 };

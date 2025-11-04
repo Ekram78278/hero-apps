@@ -33,7 +33,7 @@ const Navbar = () => {
               <Link to="/allApps">Apps</Link>
             </li>
             <li>
-              <Link>Installation</Link>
+              <Link to='/installList'>Installation</Link>
             </li>
           </ul>
         </div>
@@ -57,17 +57,22 @@ const Navbar = () => {
             </summary>
           </li>
           <li>
-            <Link to="">Installation</Link>
+            <Link to="/installList">Installation</Link>
           </li>
         </ul>
       </div>
       <div className="navbar-end">
         <Link
           to="https://github.com/Ekram78278/hero-apps.git"
-          className="btn bg-[linear-gradient(125.07deg,#632EE3,#9F62F2)] ml-40 lg:ml-[720px] mt-3 hover:scale-75 transition ease-in-out text-white"
+          className="btn bg-[linear-gradient(125.07deg,#632EE3,#9F62F2)] ml-40 lg:ml-[720px] mt-3 hover:scale-105 transition ease-in-out text-white"
         >
           {" "}
-          <img src="/public/github.png" alt="" /> Contribute
+          <img
+            src="/public/github.png"
+            className="bg-white rounded-full"
+            alt=""
+          />{" "}
+          Contribute
         </Link>
       </div>
     </div>

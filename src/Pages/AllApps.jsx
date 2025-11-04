@@ -10,7 +10,7 @@ const AllApps = () => {
    
   if (loading) {
     return <div>
-        <Spinner></Spinner> <h1>Loading......</h1>
+        <Spinner></Spinner> 
     </div>;
   }
 
@@ -19,6 +19,7 @@ const AllApps = () => {
     ? apps.filter((data) => data.title.toLocaleLowerCase().includes(term))
     : apps;
 
+   
   return (
     <div>
       <div className="flex flex-col justify-start items-center gap-4">

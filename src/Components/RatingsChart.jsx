@@ -16,20 +16,15 @@ const margin = {
   bottom: 5,
 };
 
-// 1. We now accept a 'ratings' prop (which is your app.ratings array)
 export default function RatingsChart({ ratings }) {
   
-  // 2. We reverse a *copy* of the data so "5 star" shows on top
   const chartData = [...ratings].reverse();
 
   return (
    <div className="w-full max-w-2xl justify-center items-center">
-      {/* 2. Wrap your chart component */}
       <ResponsiveContainer width="100%" aspect={2}> 
-      {/* 'aspect={2}' means width is 2x height. Adjust as you like. */}
         
         <BarChart
-          // 3. REMOVE fixed width and height from here
           data={chartData}
           margin={margin}
           layout="vertical"
