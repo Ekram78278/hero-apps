@@ -14,6 +14,8 @@ const AllApps = () => {
     </div>;
   }
 
+ 
+
   const term =search.trim().toLocaleLowerCase()
   const searchedApps = term
     ? apps.filter((data) => data.title.toLocaleLowerCase().includes(term))

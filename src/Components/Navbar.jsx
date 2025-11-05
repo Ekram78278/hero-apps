@@ -1,3 +1,4 @@
+import { ArrowDownToLine, House, LayoutGrid } from "lucide-react";
 import { Link } from "react-router";
 
 const Navbar = () => {
@@ -27,7 +28,7 @@ const Navbar = () => {
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
           >
             <li>
-              <Link>Home</Link>
+              <Link to='/'> Home</Link>
             </li>
             <li>
               <Link to="/allApps">Apps</Link>
@@ -48,16 +49,16 @@ const Navbar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/" className="font-semibold"><House />Home</Link>
           </li>
           <li>
             <summary>
               {" "}
-              <Link to="/allApps">Apps</Link>
+              <Link to="/allApps" className="flex gap-2 font-semibold"> <LayoutGrid /> Apps</Link>
             </summary>
           </li>
           <li>
-            <Link to="/installList">Installation</Link>
+            <Link to="/installList" className="flex gap-2 font-semibold"><ArrowDownToLine /> Installation</Link>
           </li>
         </ul>
       </div>

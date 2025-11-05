@@ -45,6 +45,8 @@ const InstallList = () => {
     );
   }
 
+  if (!installList.length) return <p className=" text-4xl flex justify-center items-center">No Apps Available ... </p>
+
   return (
     <div className="max-w-7xl mx-auto px-4 py-8">
       <div className="w-full min-h-[106px] flex flex-col justify-center items-center mb-8 ">
