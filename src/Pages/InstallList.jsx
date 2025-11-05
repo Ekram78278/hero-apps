@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { toast, ToastContainer } from "react-toastify";
 import Spinner from "../Components/Spinner";
 import useApps from "../hooks/useAppData";
 import { formatCompact } from "../utils/formatters";
@@ -20,10 +21,10 @@ const InstallList = () => {
 
   const sortedItem = () => {
     if (sortOrder === "size-asc") {
-      return [...installList].sort((a, b) => a.size - b.size);
+      return [...installList].sort((a, b) => a.downloads - b.downloads);
     }
     if (sortOrder === "size-desc") {
-      return [...installList].sort((a, b) => b.size - a.size);
+      return [...installList].sort((a, b) => b.downloads - a.downloads);
     } else {
       return installList;
     }
@@ -35,6 +36,7 @@ const InstallList = () => {
 
     setIsInstalledList(updatedList);
     localStorage.setItem("installList", JSON.stringify(updatedList));
+    
   };
 
   if (loading) {
@@ -45,10 +47,13 @@ const InstallList = () => {
     );
   }
 
-  if (!installList.length) return <div className="mx-auto flex flex-col justify-center items-center">
-    <img src="/public/App-Error.png" alt="" />
-    <p className="text-purple-700 font-bold text-5xl">No Install Apps</p>
-  </div>
+  if (!installList.length)
+    return (
+      <div className="mx-auto flex flex-col justify-center items-center">
+        <img src="/App-Error.png" alt="" />
+        <p className="text-purple-700 font-bold text-5xl">No Install Apps</p>
+      </div>
+    );
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-8">
@@ -70,7 +75,7 @@ const InstallList = () => {
           {/* sorting dropdown menu */}
           <div className="dropdown dropdown-end">
             <div tabIndex={0} role="button" className="btn m-1">
-              Sort By Size
+              Sort By Downlaods
             </div>
             <ul
               tabIndex="-1"
@@ -137,7 +142,9 @@ const InstallList = () => {
 
                 <div className="items-end flex flex-row ">
                   <button
-                    onClick={() => handleRemove(A.id)}
+                    onClick={() => {handleRemove(A.id)
+                      if (handleRemove) return toast(`${A.title} removed`);
+                    }}
                     className="btn btn-error"
                   >
                     Uninstall
@@ -148,6 +155,7 @@ const InstallList = () => {
           ))}
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 };

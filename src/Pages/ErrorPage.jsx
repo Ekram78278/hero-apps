@@ -4,11 +4,7 @@ const ErrorPage = () => {
   const error = useRouteError();
   return (
     <div className="flex flex-col items-center justify-between mt-48">
-      <img
-        src="/public/error-404.png"
-        className="lg:w-[500px] lg:h-[500px]"
-        alt=""
-      />
+      <img src="/error-404.png" className="lg:w-[500px] lg:h-[500px]" alt="" />
       <h1 className="font-bold text-blue-800 text-4xl">
         Oopssss, page not found !!
       </h1>

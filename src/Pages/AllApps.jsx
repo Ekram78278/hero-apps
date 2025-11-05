@@ -1,31 +1,36 @@
 import { useState } from "react";
 import useApps from "../hooks/useAppData";
 
-import AppCard from "./AppCard";
 import Spinner from "../Components/Spinner";
+import AppCard from "./AppCard";
 
 const AllApps = () => {
-  const { apps, loading} = useApps();
-  const [ search, setSearch ] = useState('');
-   
+  const { apps, loading } = useApps();
+  const [search, setSearch] = useState("");
+
   if (loading) {
-    return <div>
-        <Spinner></Spinner> 
-    </div>;
+    return (
+      <div>
+        <Spinner></Spinner>
+      </div>
+    );
   }
 
- 
-
-  const term =search.trim().toLocaleLowerCase()
+  const term = search.trim().toLocaleLowerCase();
   const searchedApps = term
     ? apps.filter((data) => data.title.toLocaleLowerCase().includes(term))
     : apps;
 
-  if (searchedApps.length === 0) return <div className="mx-auto flex flex-col justify-center items-center">
-    <img src="/public/App-Error.png" alt="" />
-    <p className="text-purple-700 font-bold text-5xl">Opsss!! No App Found</p>
-  </div>
-   
+  if (searchedApps.length === 0)
+    return (
+      <div className="mx-auto flex flex-col justify-center items-center">
+        <img src="/App-Error.png" alt="" />
+        <p className="text-purple-700 font-bold text-5xl">
+          Opsss!! No App Found
+        </p>
+      </div>
+    );
+
   return (
     <div>
       <div className="flex flex-col justify-start items-center gap-4">

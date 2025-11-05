@@ -1,6 +1,6 @@
 [
   {
-    "image": "/public/demo-app (1).webp",
+    "image": "/demo-app (1).webp",
     "title": "TaskMaster Pro",
     "companyName": "Productive Labs",
     "id": 1001,
@@ -18,7 +18,7 @@
     ]
   },
   {
-    "image": "/public/demo-app (2).webp",
+    "image": "/demo-app (2).webp",
     "title": "Galaxy Rusher",
     "companyName": "PixelStorm Games",
     "id": 1003,
@@ -36,7 +36,7 @@
     ]
   },
   {
-    "image": "/public/demo-app (3).webp",
+    "image": "/demo-app (3).webp",
     "title": "Minty Budget",
     "companyName": "FinTech Solutions",
     "id": 1004,
@@ -54,7 +54,7 @@
     ]
   },
   {
-    "image": "/public/demo-app (4).webp",
+    "image": "/demo-app (4).webp",
     "title": "Zenith Wellness",
     "companyName": "MindBody Inc.",
     "id": 1005,
@@ -72,7 +72,7 @@
     ]
   },
   {
-    "image": "/public/demo-app (5).webp",
+    "image": "/demo-app (5).webp",
     "title": "QuickScan PDF",
     "companyName": "Utility Apps Co.",
     "id": 1006,
@@ -126,7 +126,7 @@
     ]
   },
   {
-    "image": "/public/demo-app (6).webp",
+    "image": "/demo-app (6).webp",
     "title": "RapidRead News",
     "companyName": "InfoStream Media",
     "id": 1009,
@@ -377,6 +377,4 @@
       { "name": "5 star", "count": 6000 }
     ]
   }
-  
 ]
-

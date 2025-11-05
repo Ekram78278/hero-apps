@@ -28,13 +28,13 @@ const Navbar = () => {
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
           >
             <li>
-              <Link to='/'> Home</Link>
+              <Link to="/"> Home</Link>
             </li>
             <li>
               <Link to="/allApps">Apps</Link>
             </li>
             <li>
-              <Link to='/installList'>Installation</Link>
+              <Link to="/installList">Installation</Link>
             </li>
           </ul>
         </div>
@@ -49,16 +49,24 @@ const Navbar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
           <li>
-            <Link to="/" className="font-semibold"><House />Home</Link>
+            <Link to="/" className="font-semibold">
+              <House />
+              Home
+            </Link>
           </li>
           <li>
             <summary>
               {" "}
-              <Link to="/allApps" className="flex gap-2 font-semibold"> <LayoutGrid /> Apps</Link>
+              <Link to="/allApps" className="flex gap-2 font-semibold">
+                {" "}
+                <LayoutGrid /> Apps
+              </Link>
             </summary>
           </li>
           <li>
-            <Link to="/installList" className="flex gap-2 font-semibold"><ArrowDownToLine /> Installation</Link>
+            <Link to="/installList" className="flex gap-2 font-semibold">
+              <ArrowDownToLine /> Installation
+            </Link>
           </li>
         </ul>
       </div>
@@ -69,7 +77,7 @@ const Navbar = () => {
         >
           {" "}
           <img
-            src="/public/github.png"
+            src="/github.png"
             className="bg-white rounded-full"
             alt=""
           />{" "}

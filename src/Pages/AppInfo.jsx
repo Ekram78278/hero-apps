@@ -1,58 +1,56 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router";
+import { toast, ToastContainer } from "react-toastify";
 import RatingsChart from "../Components/RatingsChart";
 import Spinner from "../Components/Spinner";
 import useApps from "../hooks/useAppData";
 import { formatCompact } from "../utils/formatters";
-import { toast, ToastContainer } from "react-toastify";
 
 const AppInfo = () => {
   const [isInstalled, setIsInstalled] = useState(false);
-  
+
   const { id } = useParams();
   const { apps, loading } = useApps();
   const app = apps.find((p) => String(p.id) === id);
 
-    // it will check if any app install or not 
+  // it will check if any app install or not
 
-    useEffect (() => {
-        if(app) {
-            const existingList = JSON.parse(localStorage.getItem('installList')) || [];
-            const alreadyInstalled = existingList.some(a => a.id === app.id);
-            setIsInstalled(alreadyInstalled);
-        }
-    }, [app])
+  useEffect(() => {
+    if (app) {
+      const existingList =
+        JSON.parse(localStorage.getItem("installList")) || [];
+      const alreadyInstalled = existingList.some((a) => a.id === app.id);
+      setIsInstalled(alreadyInstalled);
+    }
+  }, [app]);
 
-//   After install it will add to install list as a local storage array 
+  //   After install it will add to install list as a local storage array
 
   const handleAddToInstalledList = () => {
-
-    const existingList = JSON.parse(localStorage.getItem('installList'))
+    const existingList = JSON.parse(localStorage.getItem("installList"));
     let updateList = [];
 
-    if(existingList){
-        const isDuplicate = existingList.some( A => A.id === app.id)
-        if(isDuplicate) {
-             toast.warning("You have already Installed it Brother")
-             return false;
-           
-        }  updateList = [...existingList,app]
+    if (existingList) {
+      const isDuplicate = existingList.some((A) => A.id === app.id);
+      if (isDuplicate) {
+        toast.warning("You have already Installed it Brother");
+        return false;
+      }
+      updateList = [...existingList, app];
     } else {
-        updateList.push(app)
+      updateList.push(app);
     }
-    localStorage.setItem('installList',JSON.stringify(updateList))
+    localStorage.setItem("installList", JSON.stringify(updateList));
     toast.success(`${app.title} installed successfully!`);
     return true;
-}
-
-const handleInstall = (e) => {
-    e.preventDefault();
-    setIsInstalled(true);
-   
   };
 
+  const handleInstall = (e) => {
+    e.preventDefault();
+    setIsInstalled(true);
+  };
 
-    // Loading
+  // Loading
 
   if (loading) {
     return (
@@ -61,8 +59,6 @@ const handleInstall = (e) => {
       </div>
     );
   }
-
- 
 
   const {
     title,
@@ -102,7 +98,7 @@ const handleInstall = (e) => {
             {/* how many downloads */}
             <div className="flex flex-col justify-center items-start gap-1 lg:mt-16 mt-3">
               <img
-                src="/public/icon-downloads.png"
+                src="/icon-downloads.png"
                 className="w-[30px] h-[30px]"
                 alt=""
               />
@@ -113,7 +109,7 @@ const handleInstall = (e) => {
             {/* how many ratings */}
             <div className="flex flex-col justify-center items-start gap-1 lg:mt-16 mt-3">
               <img
-                src="/public/icon-ratings.png"
+                src="/icon-ratings.png"
                 className="w-[30px] h-[30px]"
                 alt=""
               />
@@ -125,7 +121,7 @@ const handleInstall = (e) => {
 
             <div className="flex flex-col justify-center items-start gap-1 lg:mt-16 mt-3">
               <img
-                src="/public/icon-review.png"
+                src="/icon-review.png"
                 className="w-[30px] h-[30px]"
                 alt=""
               />
@@ -134,13 +130,20 @@ const handleInstall = (e) => {
             </div>
           </div>
           {/* Install Now Button */}
-          
+
           <div>
-            <Link  onClick={ (e) => {handleInstall(e); handleAddToInstalledList();} } className={`btn mt-6 rounded-md transition ${isInstalled ? "bg-gray-400 cursor-not-allowed":"bg-green-400 hover:scale-105"}`}>
-            
-            {isInstalled ? "Installed !! " : `Install Now (${size}MB)`}
-            
-            
+            <Link
+              onClick={(e) => {
+                handleInstall(e);
+                handleAddToInstalledList();
+              }}
+              className={`btn mt-6 rounded-md transition ${
+                isInstalled
+                  ? "bg-gray-400 cursor-not-allowed"
+                  : "bg-green-400 hover:scale-105"
+              }`}
+            >
+              {isInstalled ? "Installed !! " : `Install Now (${size}MB)`}
             </Link>
           </div>
         </div>
@@ -172,7 +175,7 @@ const handleInstall = (e) => {
           magni!
         </p>
       </div>
-      <ToastContainer/>
+      <ToastContainer />
     </div>
   );
 };

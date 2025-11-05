@@ -20,7 +20,7 @@ const router = createBrowserRouter([
         {
             index:true,
             Component:home,
-            loader: () => fetch('/public/appData.json')
+            loader: () => fetch('/appData.json')
         },
         {
           path:'/allApps',
