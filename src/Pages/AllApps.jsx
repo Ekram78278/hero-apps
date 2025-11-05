@@ -21,6 +21,10 @@ const AllApps = () => {
     ? apps.filter((data) => data.title.toLocaleLowerCase().includes(term))
     : apps;
 
+  if (searchedApps.length === 0) return <div className="mx-auto flex flex-col justify-center items-center">
+    <img src="/public/App-Error.png" alt="" />
+    <p className="text-purple-700 font-bold text-5xl">Opsss!! No App Found</p>
+  </div>
    
   return (
     <div>
